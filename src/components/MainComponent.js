@@ -78,7 +78,7 @@ class Main extends Component {
                 <Route exact path="/aboutus" component={()=> <About leaders={this.props.leaders}/>}/>
                 <Route exact path="/menu" component={()=> <Menu dishes={this.props.dishes}/>}/>
                 <Route path="/menu/:dishId" component={DishWithId}/>
-                <Route exact path="/contactus" component={() => <Contact postFeedback={this.props.postFeedback} resetFeedbackForm={this.props.resetFeedbackForm}/>}/>            
+                <Route exact path="/contactus" render={() => <Contact postFeedback={this.props.postFeedback} resetFeedbackForm={this.props.resetFeedbackForm}/>}/>            
                 <Redirect to="/home" />
             </Switch>
             </CSSTransition>
